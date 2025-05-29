@@ -18,3 +18,6 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 ## API KEY
 API key is being used for open weather service in weather service file
+
+## Unit Testing
+I havent worked on unit testing before in Angular, though in the project if we need to write unit tests i will be able to do that
