@@ -1,0 +1,20 @@
+<div class="city-card">
+  <div class="card-header">
+    <h2>{{ weatherData.city }}</h2>
+    <button class="remove-btn" (click)="removeCity()">×</button>
+  </div>
+  
+  <div class="weather-info">
+    <div class="temperature">
+      {{ weatherData.temperature }}°C
+    </div>
+    <div class="condition">
+      {{ getWeatherIcon(weatherData.condition) }} {{ weatherData.condition }}
+    </div>
+  </div>
+  
+  <div class="additional-info">
+    <div>Humidity: {{ weatherData.humidity }}%</div>
+    <div>Wind: {{ weatherData.windSpeed }} km/h</div>
+  </div>
+</div>

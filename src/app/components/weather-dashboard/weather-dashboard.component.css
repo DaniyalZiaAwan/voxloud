@@ -1,0 +1,64 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 30px;
+  }
+
+  .search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #cbd5e0;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4299e1;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #3182ce;
+      }
+
+      &:disabled {
+        background-color: #a0aec0;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .error-message {
+    color: #e53e3e;
+    padding: 10px;
+    background-color: #fff5f5;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .loading-indicator {
+    text-align: center;
+    padding: 20px;
+    color: #4a5568;
+  }
+
+  .cities-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}

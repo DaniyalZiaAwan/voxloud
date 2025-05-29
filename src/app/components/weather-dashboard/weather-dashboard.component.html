@@ -1,0 +1,31 @@
+<div class="dashboard-container">
+  <h1>Weather Dashboard</h1>
+  
+  <div class="search-container">
+    <input 
+      type="text" 
+      [(ngModel)]="newCity" 
+      placeholder="Enter city name"
+      (keyup.enter)="addCity(newCity)"
+    >
+    <button (click)="addCity(newCity)" [disabled]="isLoading">
+      {{ isLoading ? 'Adding...' : 'Add City' }}
+    </button>
+  </div>
+
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+  <div *ngIf="isLoading && !error" class="loading-indicator">
+    Loading weather data...
+  </div>
+
+  <div class="cities-container">
+    <app-city-card 
+      *ngFor="let cityWeather of cities"
+      [weatherData]="cityWeather"
+      (remove)="removeCity(cityWeather.city)"
+    ></app-city-card>
+  </div>
+</div>
