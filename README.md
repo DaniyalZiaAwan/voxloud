@@ -17,4 +17,4 @@ npm run start
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## API KEY
-API key is being used for open weather service in weather service
+API key is being used for open weather service in weather service file
